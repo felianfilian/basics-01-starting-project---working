@@ -1,3 +1,4 @@
-let name = "peter";
+let result = 0;
+result = result + 10;
 
-alert("hello " + name);
+outputResult(result, "");
