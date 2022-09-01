@@ -1,6 +1,10 @@
-let result = 0;
-result = result + 10;
+let num1 = 4;
+let num2 = 5;
 
-let calculateDescription = "(" + result + " + 10)";
+let calculateDescription = `(${num1} + ${num2})`;
 
-outputResult(result, calculateDescription);
+outputResult(add(num1, num2), calculateDescription);
+
+function add(num1, num2) {
+  return (theResult = num1 + num2);
+}
