@@ -1,9 +1,8 @@
-let myname = 'mario';
+let currentResult = 0;
 
-function show(name) {
-  let myname = name;
-  alert(name);
+function show() {
+  currentResult = currentResult + userInput.value;
+  outputResult(currentResult, 'test');
 }
 
-myname = 'luigi';
-show('mario');
+addBtn.addEventListener('click', show);
