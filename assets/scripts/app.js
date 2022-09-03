@@ -10,9 +10,18 @@ let person = {
   age: 31,
 };
 
-function show() {
-  currentResult = currentResult + userInput.value;
-  outputResult(currentResult, names[1]);
+function add() {
+  currentResult += parseInt(userInput.value);
+  outputResult(currentResult, typeof currentResult);
 }
 
-addBtn.addEventListener('click', show);
+function subtract() {
+  currentResult -= parseInt(userInput.value);
+  outputResult(currentResult, names[0]);
+}
+
+function multiply() {}
+
+function divide() {}
+
+addBtn.addEventListener('click', add);
