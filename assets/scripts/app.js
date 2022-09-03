@@ -20,8 +20,17 @@ function subtract() {
   outputResult(currentResult, names[0]);
 }
 
-function multiply() {}
+function multiply() {
+  currentResult *= parseInt(userInput.value);
+  outputResult(currentResult, names[0]);
+}
 
-function divide() {}
+function divide() {
+  currentResult /= parseInt(userInput.value);
+  outputResult(currentResult, names[0]);
+}
 
 addBtn.addEventListener('click', add);
+subtractBtn.addEventListener('click', subtract);
+multiplyBtn.addEventListener('click', multiply);
+divideBtn.addEventListener('click', divide);
