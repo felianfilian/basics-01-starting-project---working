@@ -10,18 +10,26 @@ let person = {
   age: 31,
 };
 
-function add() {
-  currentResult += parseInt(userInput.value);
-  if (currentResult > 100) {
-    outputResult(0, 'too high');
+function calculate(calculationType) {
+  let initalNumber = currentResult;
+  let enteredNumber = parseInt(userInput.value);
+  let mathOperator;
+  if (calculationType == 'add') {
+    currentResult += enteredNumber;
+    mathOperator = '+';
+    let operation = `${initalNumber} ${mathOperator} ${enteredNumber}`;
+    outputResult(currentResult, operation);
   } else {
-    outputResult(currentResult, typeof currentResult);
+    outputResult(0, 'Not valid');
   }
 }
 
+function add() {
+  calculate('add');
+}
+
 function subtract() {
-  currentResult -= parseInt(userInput.value);
-  outputResult(currentResult, names[0]);
+  calculate('subract');
 }
 
 function multiply() {
