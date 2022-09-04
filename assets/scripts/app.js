@@ -12,7 +12,11 @@ let person = {
 
 function add() {
   currentResult += parseInt(userInput.value);
-  outputResult(currentResult, typeof currentResult);
+  if (currentResult > 100) {
+    outputResult(0, 'too high');
+  } else {
+    outputResult(currentResult, typeof currentResult);
+  }
 }
 
 function subtract() {
