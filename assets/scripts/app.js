@@ -13,14 +13,19 @@ let person = {
 function calculate(mathOperator) {
   let initalNumber = currentResult;
   let enteredNumber = parseInt(userInput.value);
-  let mathOperator = mathOperator;
-  if (calculationType == '+') {
+  let operation = `${initalNumber} ${mathOperator} ${enteredNumber}`;
+  if (mathOperator == '+') {
     currentResult += enteredNumber;
-    let operation = `${initalNumber} ${mathOperator} ${enteredNumber}`;
-    outputResult(currentResult, operation);
+  } else if (mathOperator == '-') {
+    currentResult -= enteredNumber;
+  } else if (mathOperator == '*') {
+    currentResult *= enteredNumber;
+  } else if (mathOperator == '/') {
+    currentResult /= enteredNumber;
   } else {
-    outputResult(0, 'Not valid');
+    operation = 'not valid';
   }
+  outputResult(currentResult, operation);
 }
 
 function add() {
