@@ -10,13 +10,12 @@ let person = {
   age: 31,
 };
 
-function calculate(calculationType) {
+function calculate(mathOperator) {
   let initalNumber = currentResult;
   let enteredNumber = parseInt(userInput.value);
-  let mathOperator;
-  if (calculationType == 'add') {
+  let mathOperator = mathOperator;
+  if (calculationType == '+') {
     currentResult += enteredNumber;
-    mathOperator = '+';
     let operation = `${initalNumber} ${mathOperator} ${enteredNumber}`;
     outputResult(currentResult, operation);
   } else {
@@ -25,21 +24,19 @@ function calculate(calculationType) {
 }
 
 function add() {
-  calculate('add');
+  calculate('+');
 }
 
 function subtract() {
-  calculate('subract');
+  calculate('-');
 }
 
 function multiply() {
-  currentResult *= parseInt(userInput.value);
-  outputResult(currentResult, names[0]);
+  calculate('*');
 }
 
 function divide() {
-  currentResult /= parseInt(userInput.value);
-  outputResult(currentResult, names[0]);
+  calculate('/');
 }
 
 addBtn.addEventListener('click', add);
